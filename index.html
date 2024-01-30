@@ -7,21 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-        <h1 class="app-title">
+    <header class="text-center p-6 bg-orange-500">
+        <h1 class="app-title text-3xl text-red-700">
           <i class="page-title"></i> Fill My Belly!
         </h1>
-        <p>Search for receipes based on ingredients on hand in your pantry!
+        <p class = "pt-1 text-sm"> Search for receipes based on ingredients <br> on hand in your pantry!
         </p>
       </header>
-      
-      <div class="recipe-container">
-        <div class="jumbotron text-center">
+    
+    <main class = "grid grid-cols-2 gap-4">
+        <div class="ingredients-container text-center">
           <h2>Recipe Generator</h2>
           <p>Use this app to generate recipe ideas!</p>
+        </div>
 
-      <footer class="footer">
-        insert description here
-      </footer>
+        <div class = "recipe-container text-center"> recipes</div>
+    </main>
+
+    <footer class="footer text-center">
+        footer
+    </footer>
 </body>
 </html>
