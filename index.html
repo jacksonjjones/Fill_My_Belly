@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fill My Belly</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <header class="text-center p-6 bg-orange-500">
-      <h1 class="app-title text-3xl text-red-700">
-        <i class="page-title"></i> Fill My Belly!
-      </h1>
-      <p class="pt-1 text-sm">
-        Search for receipes based on ingredients <br />
-        on hand in your pantry!
-      </p>
-    </header>
 
-    <main class="grid grid-cols-2 gap-4">
-      <div class="ingredients-container text-center">
-        <h2>Recipe Generator</h2>
-        <p>Use this app to generate recipe ideas!</p>
-      </div>
-      <section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fill My Belly</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="text-center p-6 bg-orange-500">
+    <h1 class="app-title text-3xl text-red-700">
+      <i class="page-title"></i> Fill My Belly!
+    </h1>
+    <p class="pt-1 text-sm">
+      Search for receipes based on ingredients <br />
+      on hand in your pantry!
+    </p>
+  </header>
+
+  <main class="grid grid-cols-2 gap-4">
+    <div class="ingredients-container text-center">
+      <h2>Recipe Generator</h2>
+      <p>Use this app to generate recipe ideas!</p>
+    </div>
+    <section>
+      <form>
         <div>
-          <input
-            type="text"
-            placeholder="Enter ingredients"
-            id="searched-ingredient"
-          />
+          <input type="text" placeholder="Enter ingredients" />
           <input type="submit" name="" id="submit-btn" />
         </div>
         <div id="ingredients-container">
-          <ul id="ingredients-list"></ul>
+          <ul id="ingredients-list">
+            <li>sample item 1</li>
+          </ul>
           <button>Clear Ingredients</button>
         </div>
-      </section>
-      <div class="recipe-container text-center">recipes</div>
-    </main>
+      </form>
+    </section>
+    <div class="recipe-container text-center">recipes</div>
+  </main>
 
-    <footer class="footer text-center">footer</footer>
-    <script src="./assets/index.js"></script>
-    <script src="./assets/edamam.js"></script>
-  </body>
+  <footer class="footer text-center">footer</footer>
+</body>
+<script src="./assets/spoonacular.js"></script>
+
 </html>
