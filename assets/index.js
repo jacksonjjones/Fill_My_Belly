@@ -3,6 +3,16 @@ var submitIngredientEl = document.getElementById("submit-btn");
 var ingredientUnordered = document.getElementById("ingredients-list");
 var ingredientList = [];
 
+var parsedItems = localStorage.getItem("list");
+if (parsedItems) {
+  ingredientList = JSON.parse(parsedItems);
+  for (i = 0; i < ingredientList.length; i++) {
+    var listItem = document.createElement("li");
+    listItem.textContent = ingredientList[i];
+    ingredientUnordered.appendChild(listItem);
+  }
+}
+
 function saveToLocalStorage() {
   var item = searchedIngredient.value;
   ingredientList.unshift(item);
