@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fill My Belly</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+    .recipe-container {
+      background-image: url('recipes placeholder.png'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 500px; 
+    }
+    .recipe-container-hidden {
+      background-image: none;
+    }
+  </style>
 </head>
-
-<body>
-  <header class="text-center p-6 bg-orange-500">
-    <h1 class="app-title text-3xl text-red-700">
+<body class="flex flex-col min-h-screen">
+  <header class="p-6 bg-orange-500">
+    <h1 class="text-3xl text-red-700">
       <i class="page-title"></i> Fill My Belly!
     </h1>
-    <p class="pt-1 text-sm">
-      Search for receipes based on ingredients <br />
-      on hand in your pantry!
-    </p>
   </header>
 
-  <main class="grid grid-cols-2 gap-4">
-    <div class="ingredients-container text-center">
-      <h2>Recipe Generator</h2>
-      <p>Use this app to generate recipe ideas!</p>
-    </div>
-    <section>
-      <form>
-        <div>
-          <input type="text" placeholder="Enter ingredients" />
-          <input type="submit" name="" id="submit-btn" />
+  <main class="flex-grow main-content-container">
+    <section class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row">
+      <div class="ingredients-entry-container text-center md:w-1/4">
+        <input type="text" placeholder="Enter ingredients" id="searched-ingredient" />
+        <button type="submit" class="bg-blue-500 rounded" id="submit-btn"> Submit</button>
+        <div id="ingredients-container" class="block bg-blue-500 rounded">
+          <ul id="ingredients-list"></ul>
+          <button id="clear-btn" class="hidden">Clear Ingredients</button>
         </div>
-        <div id="ingredients-container">
-          <ul id="ingredients-list">
-            <li>sample item 1</li>
-          </ul>
-          <button>Clear Ingredients</button>
-        </div>
-      </form>
+      </div>
+
+      <div class="recipe-container text-center md:w-3/4"></div>
     </section>
-    <div class="recipe-container text-center">recipes</div>
+
+    <section class="mt-10 text-center">second api used below (cooking terms) </section>
+
   </main>
 
-  <footer class="footer text-center">footer</footer>
-</body>
-<script src="./assets/spoonacular.js"></script>
+  <footer class="footer text-center p-4 bg-orange-500 text-white">
+    footer
+  </footer>
 
+  <script src="./assets/index.js"></script>
+  <script src="./assets/edamam.js"></script>
+  <script src="./assets/spoonacular.js"></script>
+</body>
 </html>
