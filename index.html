@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fill My Belly</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    
-    .recipe-container {
-      background-image: url('recipes placeholder.png'); 
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 500px; 
-    }
-    .recipe-container-hidden {
-      background-image: none;
-    }
-  </style>
-</head>
-<body class="flex flex-col min-h-screen">
-  <header class="p-6 bg-orange-500">
-    <h1 class="text-3xl text-red-700">
-      <i class="page-title"></i> Fill My Belly!
-    </h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fill My Belly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .recipe-container {
+        background-image: url("recipes placeholder.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 500px;
+      }
+      .recipe-container-hidden {
+        background-image: none;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header class="p-6 bg-orange-500">
+      <h1 class="text-3xl text-red-700">
+        <i class="page-title"></i> Fill My Belly!
+      </h1>
+    </header>
 
-  <main class="flex-grow main-content-container">
-    <section class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row">
-      <div class="ingredients-entry-container text-center md:w-1/4">
-        <input type="text" placeholder="Enter ingredients" id="searched-ingredient" />
-        <button type="submit" class="bg-blue-500 rounded" id="submit-btn"> Submit</button>
-        <div id="ingredients-container" class="block bg-blue-500 rounded">
-          <ul id="ingredients-list"></ul>
-          <button id="clear-btn" class="hidden">Clear Ingredients</button>
+    <main class="flex-grow main-content-container">
+      <section
+        class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row"
+      >
+        <div class="ingredients-entry-container text-center md:w-1/4">
+          <input
+            type="text"
+            placeholder="Enter ingredients"
+            id="searched-ingredient"
+          />
+          <button type="submit" class="bg-blue-500 rounded" id="submit-btn">
+            Submit
+          </button>
+          <div id="ingredients-container" class="block bg-blue-500 rounded">
+            <ul id="ingredients-list"></ul>
+            <button id="clear-btn" class="hidden">Clear Ingredients</button>
+          </div>
         </div>
-      </div>
 
-      <div class="recipe-container text-center md:w-3/4"></div>
-    </section>
+        <div class="recipe-container text-center md:w-3/4">
+          <button>Fill My Belly!</button>
+        </div>
+      </section>
 
-    <section class="mt-10 text-center">second api used below (cooking terms) </section>
+      <section class="mt-10 text-center">
+        second api used below (cooking terms)
+      </section>
+    </main>
 
-  </main>
+    <footer class="footer text-center p-4 bg-orange-500 text-white">
+      footer
+    </footer>
 
-  <footer class="footer text-center p-4 bg-orange-500 text-white">
-    footer
-  </footer>
-
-  <script src="./assets/index.js"></script>
-  <script src="./assets/edamam.js"></script>
-  <script src="./assets/spoonacular.js"></script>
-</body>
+    <script src="./assets/index.js"></script>
+    <script src="./assets/edamam.js"></script>
+    <script src="./assets/spoonacular.js"></script>
+  </body>
 </html>
