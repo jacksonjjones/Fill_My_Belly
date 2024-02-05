@@ -26,9 +26,9 @@
     }
   </style>
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen bg-orange-200">
   <header class="p-6 bg-orange-500">
-    <h1 class="text-3xl text-red-700">
+    <h1 class="text-3xl text-amber-950">
       <i class="fas fa-utensils"></i> Fill My Belly!
     </h1>
   </header>
@@ -36,10 +36,11 @@
   <main class="flex-grow main-content-container">
     <section class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row">
       <div class="ingredients-entry-container text-center md:w-1/4">
-        <input type="text" placeholder="Enter ingredients" id="searched-ingredient" />
+        <input type="text" placeholder="Enter ingredients" id="searched-ingredient" class="text-amber-950 rounded" />
         <button type="submit" class="bg-transparent rounded" id="submit-btn"> <i class="fas fa-search"></i> </button>
-        <div id="ingredients-container" class="block bg-blue-500 rounded">
-          <ul id="ingredients-list"></ul>
+        <div id="ingredients-container">
+          <ul id="ingredients-list" >
+          </ul>
           <button id="clear-btn" class="hidden">Clear Ingredients</button>
         </div>
       </div>
@@ -51,7 +52,7 @@
 
   </main>
 
-  <footer class="footer text-center p-4 bg-orange-500 text-white">
+  <footer class="footer text-center p-4 text-white">
     footer
   </footer>
 
