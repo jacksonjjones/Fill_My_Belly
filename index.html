@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fill My Belly</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fill My Belly</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -30,46 +30,43 @@
         background-image: none;
       }
     </style>
-  </head>
-  <body class="flex flex-col min-h-screen bg-orange-200">
+</head>
+<body class="flex flex-col min-h-screen bg-orange-200">
     <header class="p-6 bg-orange-500">
-      <h1 class="text-3xl text-amber-950 ml-10">
-        <i class="fas fa-utensils"></i> Fill My Belly
-      </h1>
+        <h1 class="text-3xl text-amber-950 ml-10">
+            <i class="fas fa-utensils"></i> Fill My Belly
+        </h1>
     </header>
 
     <main class="flex-grow main-content-container">
-      <section
-        class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row"
-      >
-        <div
-          class="ingredients-entry-container text-center md:w-1/4 bg-orange-100 p-4 rounded-lg shadow-md"
-        >
-          <input
-            type="text"
-            placeholder="Enter ingredients"
-            id="searched-ingredient"
-            class="text-amber-950 rounded"
-          />
-          <button type="submit" class="bg-transparent rounded" id="submit-btn">
-            <i class="fas fa-search"></i>
-          </button>
-          <div id="ingredients-container">
-            <ul id="ingredients-list"></ul>
-            <button id="clear-btn">clear</button>
-          </div>
-        </div>
+        <section class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row">
+            <div class="relative ingredients-entry-container text-center md:w-1/4 bg-orange-100 p-4 rounded-lg shadow-md">
+                <input type="text" placeholder="Enter ingredients" id="searched-ingredient" class="text-amber-950 rounded" />
+                <button type="submit" class="bg-transparent rounded " id="submit-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="clear-btn" class="absolute right-3 transform -translate-y-1.5"><i class="fas fa-eraser"></i></button>
+                <div id="ingredients-container">
+                    <ul id="ingredients-list"></ul>
+                </div>
+            </div>
 
-        <div class="recipe-container text-center md:w-3/4">
-          <ul id="recipe-list"></ul>
-        </div>
-      </section>
+            <div class="recipe-container text-center md:w-3/4">
+                <ul id="recipe-list"></ul>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer text-center p-4 text-white">footer</footer>
+    <footer class="footer text-center p-4 text-amber-950">
+      <a href="https://github.com/jacksonjjones/Fill_My_Belly" class="mr-4 hover:text-amber-700"><i class="fab fa-github"></i></a>
+      <a href="glossary.html" class="hover:text-amber-700"></a><i class="fas fa-book"></i></a>
+      <a href="https://example.com" class="mr-4"></a><i class="fas fa-drumstick-bite"></i></a>
+    </footer>
+    
 
     <script src="./assets/words.js"></script>
     <script src="./assets/index.js"></script>
     <script src="./assets/spoonacular.js"></script>
-  </body>
+</body>
 </html>
+
