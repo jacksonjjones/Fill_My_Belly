@@ -1,10 +1,12 @@
-var definition = document.getElementById("Definition");
+var def = document.getElementById("Definition");
 var termBtn =document.querySelectorAll(".term");
 var term;
 
 function practice(){
+	def.textContent=""
 	term = this.id;
 	console.log(term)
+	dataCall();
 }
 
 
@@ -44,6 +46,6 @@ async function dataCall(){
 
 }
 
-dataCall()
+
 termBtn.forEach((button)=>
 button.addEventListener("click",practice)) 
