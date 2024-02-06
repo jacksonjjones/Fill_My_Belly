@@ -1,5 +1,5 @@
-var apiKey = 'ff0ab97c408a433aa7dea6ebb48a0161'; // Replace with your actual API key
-
+var apiKey = 'ff0ab97c408a433aa7dea6ebb48a0161';
+var submitBtn = document.getElementById('submit-btn');
 
 // Function to call the Spoonacular API with ingredients
 async function getRecipesByIngredients(ingredients) {
@@ -20,9 +20,10 @@ async function getRecipesByIngredients(ingredients) {
 }
 
 // Example usage
-var ingredients = '';
-// Replace with your desired ingredients
+var ingredients = document.getElementById('search-ingredient').value;
+// Ingredients from the list
 getRecipesByIngredients(ingredients)
+console.log(ingredients)
     .then(recipes => {
         console.log(recipes)
         if (!recipes.results.length) {
@@ -43,3 +44,6 @@ getRecipesByIngredients(ingredients)
     .catch(error => {
         console.error('Error:', error);
     });
+
+submitBtn.addEventListener("click", getRecipesByIngredients
+)
