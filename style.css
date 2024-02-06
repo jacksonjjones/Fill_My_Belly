@@ -7,3 +7,9 @@ input {
    border-width: 1px;
    border-color: black;
  }
+
+ #ingredients-list {
+   font-family: "Single Day", cursive;
+   font-weight: 400;
+   font-style: normal;
+ }

@@ -1,6 +1,7 @@
 var searchedIngredient = document.getElementById("searched-ingredient");
 var submitIngredientEl = document.getElementById("submit-btn");
 var ingredientUnordered = document.getElementById("ingredients-list");
+var clearHistoryBtn = document.getElementById("clear-btn")
 var ingredientList = [];
 
 var parsedItems = localStorage.getItem("list");
@@ -9,8 +10,29 @@ if (parsedItems) {
   for (i = 0; i < ingredientList.length; i++) {
     var listItem = document.createElement("li");
     listItem.textContent = ingredientList[i];
+    listItem.classList.add("m-2");
     ingredientUnordered.appendChild(listItem);
   }
+}
+
+function showClearHistory() {
+  if (ingredientUnordered.children.length > 0) {
+    clearHistoryBtn.classList.remove("hidden");
+    clearHistoryBtn.classList.add("bg-amber-800")
+    clearHistoryBtn.classList.add("text-amber-600")
+    clearHistoryBtn.classList.add("text-xs")
+    clearHistoryBtn.classList.add("p-1")
+    clearHistoryBtn.classList.add("rounded-md")
+  } else {
+    clearHistoryBtn.classList.add("hidden");
+  }
+}
+
+function clearIngredientsList() {
+  ingredientList = [];
+  localStorage.removeItem("list");
+  ingredientUnordered.innerHTML = "";
+  clearHistoryBtn.classList.add("hidden");
 }
 
 function saveToLocalStorage() {
@@ -25,14 +47,20 @@ function saveToLocalStorage() {
 function addToIngredientList() {
   var item1 = searchedIngredient.value;
   console.log(item1);
-  var itemName = document.createElement("li");
-  itemName.textContent = item1;
-  itemName.classList.add("m-2");
-  itemName.classList.add("bg-red-700");
-  itemName.classList.add("text-yellow-500");
-  itemName.classList.add("rounded-full");
-  itemName.classList.add("w-1/4", "mx-auto");
-  ingredientUnordered.appendChild(itemName);
+  var listItem = document.createElement("li");
+  listItem.textContent = item1;
+  listItem.classList.add("m-2");
+  ingredientUnordered.appendChild(listItem);
+  clearHistoryBtn.classList.remove("hidden");
+  clearHistoryBtn.classList.add("bg-amber-800")
+    clearHistoryBtn.classList.add("text-amber-600")
+    clearHistoryBtn.classList.add("text-xs")
+    clearHistoryBtn.classList.add("p-1")
+    clearHistoryBtn.classList.add("rounded-md")
 }
 
-submitIngredientEl.addEventListener("click", saveToLocalStorage);
+submitIngredientEl.addEventListener("click", saveToLocalStorage,);
+clearHistoryBtn.addEventListener("click",clearIngredientsList );
+showClearHistory();
+
+
