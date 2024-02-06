@@ -1,3 +1,9 @@
 body {
    font-family: monospace;
 }
+
+input {
+   border-style: solid;
+   border-width: 1px;
+   border-color: black;
+ }

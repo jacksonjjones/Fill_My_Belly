@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glossary</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div>
-      <button id="al-dente">Al Dente</button>
-      <button id="blanch">Blanch</button>
-      <button id="braise">Braise</button>
-      <button id="baste">Baste</button>
-      <button id="broil">Broil</button>
-      <button id="butterfly">Butterfly</button>
-      <button id="caramelize">Caramelize</button>
-      <button id="chiffonade">Chiffonade</button>
-      <button id="deglaze">Deglaze</button>
-      <button id="dredge">Dredge</button>
-      <button id="emulsify">Emulsify</button>
-      <button id="fold">Fold</button>
-      <button id="garnish">Garnish</button>
-      <button id="julienne">Julienne</button>
-      <button id="knead">Knead</button>
-      <button id="marinate">Marinate</button>
-      <button id="mince">Mince</button>
-      <button id="parboil">Parboil</button>
-      <button id="poach">Poach</button>
-      <button id="reduce">Reduce</button>
-      <button id="render">Render</button>
-      <button id="roux">Roux</button>
-      <button id="saute">Saute</button>
-      <button id="scald">Scald</button>
-      <button id="sear">Sear</button>
-      <button id="slurry">Slurry</button>
-      <button id="truss">Truss</button>
-      <button id="zest">Zest</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+      />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen bg-orange-200">
+
+  <header class="p-6 bg-orange-500 text-amber-950 text-center">
+    <h1 class="text-3xl"> <i class="fas fa-hamburger"></i> Food Glossary </h1>
+    <p>Click a word to see what it means!</p>
+  </header>
+
+    <div class="container mt-10 mx-auto my-8 bg-orange-100 p-4 rounded shadow-lg flex flex-wrap justify-center items-center space-x-4 w-3/4">
+    <button id="al-dente" class="mb-2 hover:ring-2 ring-red-500 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Al Dente</button>
+    <button id="blanch" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full ">Blanch</button>
+    <button id="braise" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Braise</button>
+    <button id="baste" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Baste</button>
+    <button id="broil" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Broil</button>
+    <button id="butterfly" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Butterfly</button>
+    <button id="caramelize" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Caramelize</button>
+    <button id="chiffonade" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Chiffonade</button>
+    <button id="deglaze" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Deglaze</button>
+    <button id="dredge" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Dredge</button>
+    <button id="emulsify" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Emulsify</button>
+    <button id="fold" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Fold</button>
+    <button id="garnish" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Garnish</button>
+    <button id="julienne" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Julienne</button>
+    <button id="knead" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Knead</button>
+    <button id="knead" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Marinate</button>
+    <button id="mince" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Mince</button>
+    <button id="parboil" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Parboil</button>
+    <button id="poach" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Poach</button>
+    <button id="reduce" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Reduce</button>
+    <button id="render" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Render</button>
+    <button id="roux" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Roux</button>
+    <button id="saute" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Saute</button>
+    <button id="scald" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Scald</button>
+    <button id="sear" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Sear</button>
+    <button id="slurry" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Slurry</button>
+    <button id="truss" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Truss</button>
+    <button id="zest" class="mb-2 hover:ring-2 ring-red-400 bg-red-700 text-yellow-500 px-4 py-2 rounded-full">Zest</button>
     </div>
-    <div id="def-container"></div>
-    <script src="./assets/words.js"></script>
+
+
+    <div class="container mx-auto my-8 bg-orange-200 p-4 rounded shadow-md text-center w-1/2">
+      <p>Definitions go here...</p>
+    </div>
+    
+    <script src="./assets/index.js"></script>
+
   </body>
 </html>
