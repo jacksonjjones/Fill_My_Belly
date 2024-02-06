@@ -1,7 +1,15 @@
+var definition = document.getElementById("Definition");
+var termBtn =document.querySelectorAll(".term");
+var term;
+
+function practice(){
+	term = this.id;
+	console.log(term)
+}
 
 
 async function dataCall(){
-	const url = 'https://wordsapiv1.p.rapidapi.com/words/zest/definitions';
+	const url = 'https://wordsapiv1.p.rapidapi.com/words/'+term+'/definitions';
 	const options = {
 		method: 'GET',
 		headers: {
@@ -15,7 +23,7 @@ async function dataCall(){
 		console.log(result);
 		const wordHeader = document.createElement("h1")
 		wordHeader.textContent = result.word
-		document.getElementById("def-container").appendChild(wordHeader)
+		document.getElementById("Definition").appendChild(wordHeader)
 		result.definitions.forEach(function (definition){
 			const newCard=`
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
@@ -28,7 +36,7 @@ async function dataCall(){
 		  </div>`;
 		  const cardContainer = document.createElement("div")
 		  cardContainer.innerHTML=newCard
-		  document.getElementById("def-container").appendChild(cardContainer)
+		  document.getElementById("Definition").appendChild(cardContainer)
 		})
 	} catch (error) {
 		console.error(error);
@@ -36,4 +44,6 @@ async function dataCall(){
 
 }
 
-dataCall() 
+dataCall()
+termBtn.forEach((button)=>
+button.addEventListener("click",practice)) 
