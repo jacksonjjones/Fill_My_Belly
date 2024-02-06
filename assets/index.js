@@ -18,11 +18,11 @@ if (parsedItems) {
 function showClearHistory() {
   if (ingredientUnordered.children.length > 0) {
     clearHistoryBtn.classList.remove("hidden");
-    clearHistoryBtn.classList.add("bg-amber-800")
     clearHistoryBtn.classList.add("text-amber-600")
-    clearHistoryBtn.classList.add("text-xs")
+    clearHistoryBtn.classList.add("text-lg")
     clearHistoryBtn.classList.add("p-1")
     clearHistoryBtn.classList.add("rounded-md")
+    clearHistoryBtn.classList.add("hover:text-amber-700")
   } else {
     clearHistoryBtn.classList.add("hidden");
   }
@@ -52,11 +52,11 @@ function addToIngredientList() {
   listItem.classList.add("m-2");
   ingredientUnordered.appendChild(listItem);
   clearHistoryBtn.classList.remove("hidden");
-  clearHistoryBtn.classList.add("bg-amber-800")
     clearHistoryBtn.classList.add("text-amber-600")
-    clearHistoryBtn.classList.add("text-xs")
+    clearHistoryBtn.classList.add("text-lg")
     clearHistoryBtn.classList.add("p-1")
     clearHistoryBtn.classList.add("rounded-md")
+    clearHistoryBtn.classList.add("hover:text-amber-700")
 }
 
 submitIngredientEl.addEventListener("click", saveToLocalStorage,);
