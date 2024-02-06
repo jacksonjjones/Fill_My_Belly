@@ -27,6 +27,11 @@ function addToIngredientList() {
   console.log(item1);
   var itemName = document.createElement("li");
   itemName.textContent = item1;
+  itemName.classList.add("m-2");
+  itemName.classList.add("bg-red-700");
+  itemName.classList.add("text-yellow-500");
+  itemName.classList.add("rounded-full");
+  itemName.classList.add("w-1/4", "mx-auto");
   ingredientUnordered.appendChild(itemName);
 }
 
