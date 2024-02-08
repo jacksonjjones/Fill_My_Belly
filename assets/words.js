@@ -2,6 +2,7 @@ var def = document.getElementById("Definition");
 var termBtn =document.querySelectorAll(".term");
 var term;
 
+//code to test functionality
 function practice(){
 	def.textContent=""
 	term = this.id;
@@ -9,7 +10,7 @@ function practice(){
 	dataCall();
 }
 
-
+//function to retrieve data
 async function dataCall(){
 	const url = 'https://wordsapiv1.p.rapidapi.com/words/'+term+'/definitions';
 	const options = {
@@ -19,6 +20,7 @@ async function dataCall(){
 			'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
 		}
 	};
+	//function to get defintions 
 	try {
 		const response = await fetch(url, options);
 		const result = await response.json();
@@ -46,6 +48,6 @@ async function dataCall(){
 
 }
 
-
+//event listener for buttons to definitions
 termBtn.forEach((button)=>
 button.addEventListener("click",practice)) 
