@@ -1,4 +1,4 @@
-var def = document.getElementById("Definition");
+var def = document.getElementById("definition");
 var termBtn =document.querySelectorAll(".term");
 var term;
 
@@ -27,7 +27,7 @@ async function dataCall(){
 		console.log(result);
 		const wordHeader = document.createElement("h1")
 		wordHeader.textContent = result.word
-		document.getElementById("Definition").appendChild(wordHeader)
+		document.getElementById("definition").appendChild(wordHeader)
 		result.definitions.forEach(function (definition){
 			const newCard=`
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
@@ -40,7 +40,7 @@ async function dataCall(){
 		  </div>`;
 		  const cardContainer = document.createElement("div")
 		  cardContainer.innerHTML=newCard
-		  document.getElementById("Definition").appendChild(cardContainer)
+		  document.getElementById("definition").appendChild(cardContainer)
 		})
 	} catch (error) {
 		console.error(error);
