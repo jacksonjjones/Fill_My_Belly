@@ -1,5 +1,14 @@
 # Fill_My_Belly
 
+## Group 3
+Jackson Jones, Courtney Hook, Eric Snider, Imani Edwards!
+
+## Description
+The task for our group was to to use everything we learned over the past six weeks to create a real-world front-end application that we will be able to showcase to potential employers.
+
+## Technologies!
+html, css, javascript, tailwindCSS, spoonacular API, words API
+
 ## User Story
 
 ```md
