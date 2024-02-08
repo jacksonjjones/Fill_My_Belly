@@ -1,4 +1,3 @@
-// Makin some variables
 var apiKey = '28d6cec782174195b837ba8420030c9f';
 var submitBtn = document.getElementById('submit-btn');
 
@@ -38,6 +37,11 @@ var ingredientsInput = document.getElementById('searched-ingredient');
 
 function getRecipesByIngredientHandler() {
     var ingredients = ingredientsInput.value
+    var recipeDisplay = document.querySelector('.recipe-container');
+    
+    // Clear previous recipe content and reset background image
+    recipeDisplay.innerHTML = '';
+    recipeDisplay.style.backgroundImage = 'none';
 
     getRecipesByIngredients(ingredients)
         .then(function (recipes) {
