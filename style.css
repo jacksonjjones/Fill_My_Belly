@@ -18,3 +18,14 @@ input {
    font-weight: 400;
    font-style: normal;
  }
+
+ .recipe-container {
+   background-image: url("food.png");
+   background-size: 74%;
+   background-position: center;
+   background-repeat: no-repeat;
+   min-height: 600px;
+ }
+ .recipe-container-hidden {
+   background-image: none;
+ }
