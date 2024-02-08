@@ -25,6 +25,8 @@ input {
    background-position: center;
    background-repeat: no-repeat;
    min-height: 600px;
+   max-height: 24rem; /* Set the maximum height of the container */
+   overflow-y: auto; /* Add scroll if content exceeds fixed height */
  }
  .recipe-container-hidden {
    background-image: none;
@@ -67,3 +69,9 @@ input {
   text-decoration: none;
   cursor: pointer;
 }
+
+.fixed-height-container {
+   max-height: calc(100vh - 20rem); 
+   overflow-y: auto; 
+ }
+ 
