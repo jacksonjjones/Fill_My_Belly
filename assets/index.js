@@ -11,6 +11,7 @@ if (parsedItems) {
     var listItem = document.createElement("li");
     listItem.textContent = ingredientList[i];
     listItem.classList.add("m-2");
+    listItem.classList.add("text-2xl")
     ingredientUnordered.appendChild(listItem);
   }
 }
@@ -50,6 +51,7 @@ function addToIngredientList() {
   var listItem = document.createElement("li");
   listItem.textContent = item1;
   listItem.classList.add("m-2");
+  listItem.classList.add("text-2xl")
   ingredientUnordered.appendChild(listItem);
   clearHistoryBtn.classList.remove("hidden");
     clearHistoryBtn.classList.add("text-amber-600")
