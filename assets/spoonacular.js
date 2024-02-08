@@ -1,13 +1,14 @@
-var apiKey = '0b04e58534604c54979d203a2cabe6ee';
+// Makin some variables
+var apiKey = '28d6cec782174195b837ba8420030c9f';
 var submitBtn = document.getElementById('submit-btn');
 
 // Function to call the Spoonacular API with ingredients
 function getRecipesByIngredients(ingredients) {
 
 
-
+    // query to ping for ingredients
     var apiUrl = `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${ingredients}&apiKey=${apiKey}&fillIngredients=true`;
-
+    // Api request 
     return fetch(apiUrl).then(
         function (response) {
             if (!response.ok) {
@@ -19,7 +20,7 @@ function getRecipesByIngredients(ingredients) {
         }
     )
 }
-
+//  query to ping recipes
 function getFullRecipe(recipeId) {
 
     return fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`).then(
@@ -32,9 +33,9 @@ function getFullRecipe(recipeId) {
 
         })
 }
-// Example usage
+//Pull ingredients from user input
 var ingredientsInput = document.getElementById('searched-ingredient');
-// Ingredients from the list
+
 function getRecipesByIngredientHandler() {
     var ingredients = ingredientsInput.value
 
@@ -43,6 +44,7 @@ function getRecipesByIngredientHandler() {
             if (!recipes.results.length) {
                 return alert("Too Many Ingredients. Try fewer Ingredients!")
             }
+            // DOM manipulations to display recipes
             var recipeDisplay = document.querySelector('.recipe-container')
             for (var recipe of recipes.results) {
                 getFullRecipe(recipe.id).then(function (data) {
@@ -56,10 +58,12 @@ function getRecipesByIngredientHandler() {
 
                     elementMaker.textContent = recipeName
                     recipeDisplay.appendChild(elementMaker)
-                    elementPic.setAttribute("src", "data.image")
+                    elementPic.setAttribute("src", recipeImage)
+                    elementPic.setAttribute("style", "height: 93px; width: 139px;")
                     recipeDisplay.appendChild(elementPic)
-                    elementRecipe.textContent = recipeSteps
+                    elementRecipe.innerHTML = recipeSteps
                     recipeDisplay.appendChild(elementRecipe)
+
 
                 })
             }
