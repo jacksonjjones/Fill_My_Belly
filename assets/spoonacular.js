@@ -1,49 +1,73 @@
-var apiKey = 'ff0ab97c408a433aa7dea6ebb48a0161';
+var apiKey = '0b04e58534604c54979d203a2cabe6ee';
 var submitBtn = document.getElementById('submit-btn');
 
 // Function to call the Spoonacular API with ingredients
-async function getRecipesByIngredients(ingredients) {
+function getRecipesByIngredients(ingredients) {
+
+
+
     var apiUrl = `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${ingredients}&apiKey=${apiKey}&fillIngredients=true`;
 
-    try {
-        var response = await fetch(apiUrl);
+    return fetch(apiUrl).then(
+        function (response) {
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} - ${response.statusText}`);
+            }
 
-        if (!response.ok) {
-            throw new Error(`Error: ${response.status} - ${response.statusText}`);
+            return response.json();
+
         }
-
-        var data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error fetching data:', error.message);
-    }
+    )
 }
 
+function getFullRecipe(recipeId) {
+
+    return fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`).then(
+        function (response) {
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} - ${response.statusText}`);
+            }
+
+            return response.json();
+
+        })
+}
 // Example usage
-var ingredients = document.getElementById('search-ingredient').value;
+var ingredientsInput = document.getElementById('searched-ingredient');
 // Ingredients from the list
-getRecipesByIngredients(ingredients)
-console.log(ingredients)
-    .then(recipes => {
-        console.log(recipes)
-        if (!recipes.results.length) {
-            return alert("Too Many Ingredients. Try fewer Ingredients!")
-        }
-        for (var recipe of recipes.results) {
-            fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${apiKey}`).then(
-                function (res) {
-                    return res.json()
+function getRecipesByIngredientHandler() {
+    var ingredients = ingredientsInput.value
 
-                }).then(function (data) {
-                    console.log(data)
+    getRecipesByIngredients(ingredients)
+        .then(function (recipes) {
+            if (!recipes.results.length) {
+                return alert("Too Many Ingredients. Try fewer Ingredients!")
+            }
+            var recipeDisplay = document.querySelector('.recipe-container')
+            for (var recipe of recipes.results) {
+                getFullRecipe(recipe.id).then(function (data) {
+                    var recipeImage = data.image
+                    var recipeSteps = data.instructions
+                    var recipeLink = data.sourceUrl
+                    var recipeName = data.title
+                    var elementMaker = document.createElement('h1')
+                    var elementPic = document.createElement('img')
+                    var elementRecipe = document.createElement('p')
+
+                    elementMaker.textContent = recipeName
+                    recipeDisplay.appendChild(elementMaker)
+                    elementPic.setAttribute("src", "data.image")
+                    recipeDisplay.appendChild(elementPic)
+                    elementRecipe.textContent = recipeSteps
+                    recipeDisplay.appendChild(elementRecipe)
+
                 })
-        }
+            }
 
+        })
+        .catch(function (error) {
+            console.error('Error:', error);
+        });
+}
+submitBtn.addEventListener("click", getRecipesByIngredientHandler);
 
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-
-submitBtn.addEventListener("click", getRecipesByIngredients
-)
