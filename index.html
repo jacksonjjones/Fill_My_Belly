@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,42 +15,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Imbue:opsz,wght@10..100,200&family=Luckiest+Guy&family=Nabla&family=Noto+Color+Emoji&family=Righteous&family=Single+Day&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="flex flex-col min-h-screen bg-orange-200">
-    <header class="p-6 bg-orange-500">
-        <h1 class="text-4xl text-amber-950 ml-10">
-            <i class="fas fa-utensils"></i> Fill My Belly
-        </h1>
-    </header>
+  <header class="p-6 bg-orange-500">
+    <h1 class="text-4xl text-amber-950 ml-10">
+      <i class="fas fa-utensils"></i> Fill My Belly
+    </h1>
+  </header>
 
-    <main class="flex-grow main-content-container">
-        <section class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row">
-            <div class="relative ingredients-entry-container text-center md:w-1/4 bg-orange-100 p-4 rounded-lg shadow-md">
-                <input type="text" placeholder="Enter ingredients" id="searched-ingredient" class="text-amber-950 rounded" />
-                <button type="submit" class="bg-transparent rounded " id="submit-btn">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button id="clear-btn" class="absolute right-3 transform -translate-y-1.5"><i class="fas fa-eraser"></i></button>
-                <div id="ingredients-container">
-                    <ul id="ingredients-list"></ul>
-                </div>
-            </div>
+  <main class="flex-grow main-content-container">
+    <section class="container flex flex-col mx-auto mt-10 space-y-12 sm:px-2 md:space-y-0 md:px-12 md:flex-row">
+      <div class="relative ingredients-entry-container text-center md:w-1/4 bg-orange-100 p-4 rounded-lg shadow-md">
+        <input type="text" placeholder="Enter ingredients" id="searched-ingredient" class="text-amber-950 rounded" />
+        <button type="submit" class="bg-transparent rounded " id="submit-btn">
+          <i class="fas fa-search"></i>
+        </button>
+        <button id="clear-btn" class="absolute right-3 transform -translate-y-1.5"><i
+            class="fas fa-eraser"></i></button>
+        <div id="ingredients-container">
+          <ul id="ingredients-list"></ul>
+        </div>
+      </div>
 
-            <div class="recipe-container text-center md:w-3/4">
-                <ul id="recipe-list"></ul>
-            </div>
+      <div class="recipe-container text-center md:w-3/4">
+
+        <footer class="footer text-center p-4 text-amber-950">
+          <a href="https://github.com/jacksonjjones/Fill_My_Belly" class="mr-4 hover:text-amber-700 text-2xl"><i
+              class="fab fa-github"></i></a>
+          <a href="glossary.html" class="mr-4 hover:text-amber-700 text-2xl"> <i class="fas fa-book"></i></a>
+          <a href="https://youtu.be/dQw4w9WgXcQ?si=4fYpbctpRZt7VIFt" class="mr-4 hover:text-amber-700 text-2xl"> <i
+              class="fab fa-youtube"></i></a>
+        </footer>
+
+
+        <section class="mt-10 text-center">
+          Second API used below (cooking terms)
         </section>
-    </main>
+  </main>
 
-    <footer class="footer text-center p-4 text-amber-950">
-      <a href="https://github.com/jacksonjjones/Fill_My_Belly" class="mr-4 hover:text-amber-700 text-2xl"><i class="fab fa-github"></i></a>
-      <a href="glossary.html" class="mr-4 hover:text-amber-700 text-2xl"> <i class="fas fa-book"></i></a>
-      <a href="https://youtu.be/dQw4w9WgXcQ?si=4fYpbctpRZt7VIFt" class="mr-4 hover:text-amber-700 text-2xl"> <i class="fab fa-youtube"></i></a>
-    </footer>
-    
+  <footer class="footer text-center p-4 text-amber-950">
+    <a href="https://github.com/jacksonjjones/Fill_My_Belly" class="mr-4 hover:text-amber-700"><i
+        class="fab fa-github"></i></a>
+    <a href="glossary.html" class="mr-4 hover:text-amber-700"> <i class="fas fa-book"></i></a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=4fYpbctpRZt7VIFt" class="mr-4 hover:text-amber-700"> <i
+        class="fas fa-drumstick-bite"></i></a>
+  </footer>
 
-    <script src="./assets/words.js"></script>
-    <script src="./assets/index.js"></script>
-    <script src="./assets/spoonacular.js"></script>
+
+  <script src="./assets/words.js"></script>
+  <script src="./assets/index.js"></script>
+  <script src="./assets/spoonacular.js"></script>
 </body>
-</html>
 
+</html>
