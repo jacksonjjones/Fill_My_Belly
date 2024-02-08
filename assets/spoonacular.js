@@ -1,4 +1,4 @@
-var apiKey = '0b04e58534604c54979d203a2cabe6ee';
+var apiKey = '28d6cec782174195b837ba8420030c9f';
 var submitBtn = document.getElementById('submit-btn');
 
 // Function to call the Spoonacular API with ingredients
